@@ -9,13 +9,13 @@ Summary:	Crypt::CAST5_PP Perl module - CAST5 block cipher implemented in pure Pe
 Summary(pl):	Modu³ Perla Crypt::CAST5_PP - szyfr blokowy CAST5 zaimplementowany w samym Perlu
 Name:		perl-Crypt-CAST5_PP
 Version:	1.02
-Release:	1
+Release:	2
 License:	Artistic or GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-Test-Simple >= 0.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Crypt::CAST5_PP::Tables)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,7 +36,8 @@ Szyfr CAST5 jest dostêpny bezp³atnie.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 %{!?_without_tests:%{__make} test}
 
@@ -52,9 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/Crypt/CAST5_PP.pm
-%{perl_sitelib}/Crypt/CAST5_PP
-%dir %{perl_sitelib}/auto/Crypt/CAST5_PP
-%{perl_sitelib}/auto/Crypt/CAST5_PP/autosplit.ix
-%{perl_sitelib}/auto/Crypt/CAST5_PP/*.al
+%{perl_vendorlib}/Crypt/CAST5_PP.pm
+%{perl_vendorlib}/Crypt/CAST5_PP
+%dir %{perl_vendorlib}/auto/Crypt/CAST5_PP
+%{perl_vendorlib}/auto/Crypt/CAST5_PP/autosplit.ix
+%{perl_vendorlib}/auto/Crypt/CAST5_PP/*.al
 %{_mandir}/man3/*
