@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	CAST5_PP
@@ -34,7 +38,7 @@ Szyfr CAST5 jest dostêpny bezp³atnie.
 %build
 perl Makefile.PL
 %{__make}
-%{!?_without_test:%{__make} test}
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
