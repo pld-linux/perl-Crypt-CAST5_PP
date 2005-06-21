@@ -8,13 +8,13 @@
 Summary:	Crypt::CAST5_PP Perl module - CAST5 block cipher implemented in pure Perl
 Summary(pl):	Modu³ Perla Crypt::CAST5_PP - szyfr blokowy CAST5 zaimplementowany w samym Perlu
 Name:		perl-Crypt-CAST5_PP
-Version:	1.02
-Release:	3
+Version:	1.03
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d112ab9aaff337db460c9f2bc243bc4f
+# Source0-md5:	fcb3c4ebb419036e9355932a5861fc44
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Test-Simple >= 0.1
 BuildRequires:	rpm-perlprov >= 4.1-13
