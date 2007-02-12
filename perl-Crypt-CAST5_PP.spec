@@ -6,7 +6,7 @@
 %define		pdir	Crypt
 %define		pnam	CAST5_PP
 Summary:	Crypt::CAST5_PP Perl module - CAST5 block cipher implemented in pure Perl
-Summary(pl):	Modu³ Perla Crypt::CAST5_PP - szyfr blokowy CAST5 zaimplementowany w samym Perlu
+Summary(pl.UTF-8):   ModuÅ‚ Perla Crypt::CAST5_PP - szyfr blokowy CAST5 zaimplementowany w samym Perlu
 Name:		perl-Crypt-CAST5_PP
 Version:	1.04
 Release:	1
@@ -29,11 +29,11 @@ cipher. CAST5 is also known as CAST-128. It is a product of the CAST
 design procedure developed by C. Adams and S. Tavares. The CAST5
 cipher is available royalty-free.
 
-%description -l pl
-Ten modu³ zawiera implementacjê szyfru blokowego CAST5 napisan± w
-samym Perlu. CAST5 jest znany tak¿e jako CAST-128 i jest produktem
+%description -l pl.UTF-8
+Ten moduÅ‚ zawiera implementacjÄ™ szyfru blokowego CAST5 napisanÄ… w
+samym Perlu. CAST5 jest znany takÅ¼e jako CAST-128 i jest produktem
 procesu projektowania CAST, tworzonego przez C. Adamsa i S. Tavaresa.
-Szyfr CAST5 jest dostêpny bezp³atnie.
+Szyfr CAST5 jest dostÄ™pny bezpÅ‚atnie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
