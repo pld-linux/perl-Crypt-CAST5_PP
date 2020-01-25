@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Crypt
 %define		pnam	CAST5_PP
 Summary:	Crypt::CAST5_PP Perl module - CAST5 block cipher implemented in pure Perl
